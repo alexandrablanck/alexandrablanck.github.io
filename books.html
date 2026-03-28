@@ -5,6 +5,99 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Books — Alexandra Blanck</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    .books-intro {
+      max-width: 650px;
+      margin: 2rem auto 3rem;
+      text-align: center;
+      padding: 0 2rem;
+      font-size: 0.95rem;
+      color: var(--color-text-light);
+      line-height: 1.8;
+    }
+
+    .books-list {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 0 2rem 5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+    }
+
+    .book-row {
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      gap: 2.5rem;
+      align-items: start;
+      padding-bottom: 2.5rem;
+      border-bottom: 1px solid #e8e0e0;
+    }
+
+    .book-row:last-child {
+      border-bottom: none;
+    }
+
+    .book-spine {
+      background: var(--color-bg-light);
+      border: 1px solid #e0d8d8;
+      height: 220px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .book-spine span {
+      font-family: var(--font-display);
+      font-size: 0.9rem;
+      color: var(--color-accent);
+      font-style: italic;
+      line-height: 1.4;
+    }
+
+    .book-info {
+      padding-top: 0.25rem;
+    }
+
+    .book-genre {
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--color-accent);
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .book-title {
+      font-family: var(--font-display);
+      font-size: 1.6rem;
+      color: var(--color-text);
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+
+    .book-title.untitled {
+      font-style: italic;
+      color: var(--color-text-light);
+    }
+
+    .book-description {
+      font-size: 0.93rem;
+      color: var(--color-text-light);
+      line-height: 1.85;
+    }
+
+    @media (max-width: 600px) {
+      .book-row {
+        grid-template-columns: 1fr;
+      }
+      .book-spine {
+        height: 100px;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -28,37 +121,54 @@
   </div>
 
   <!-- PAGE HEADING -->
-  <div class="page-heading" style="background: var(--color-bg-light); padding-bottom: 2rem;">
+  <div class="page-heading" style="background: var(--color-bg-light);">
     <h1>Books</h1>
     <div class="divider"></div>
   </div>
 
-  <!-- BOOKS GRID -->
-  <div style="background: var(--color-bg-light); padding: 0 2rem 4rem;">
-    <div class="books-grid" style="max-width: 1000px; margin: 0 auto;">
+  <!-- INTRO -->
+  <div class="books-intro" style="background: var(--color-bg-light); max-width: 100%; padding: 1.5rem 2rem 3rem;">
+    <p style="max-width: 650px; margin: 0 auto;">I write contemporary romance and thriller fiction. Here's a look at what I'm currently working on.</p>
+  </div>
 
-      <div class="book-card">
-        <div class="status">Querying</div>
-        <p>
-          A contemporary romance about a travel writer and photographer working at a lifestyle
-          magazine who fall in love while competing for the same assignment.
-        </p>
+  <!-- BOOKS LIST -->
+  <div style="background: var(--color-bg-light); padding-bottom: 2rem;">
+    <div class="books-list">
+
+      <!-- Book 1 -->
+      <div class="book-row">
+        <div class="book-spine">
+          <span>Beyond Office Walls</span>
+        </div>
+        <div class="book-info">
+          <div class="book-genre">Contemporary Romance</div>
+          <div class="book-title">Beyond Office Walls</div>
+          <p class="book-description">When travel writer Lucy is paired with photographer Aidan for a high-stakes office competition, there's just one problem — they already know each other. As deadlines blur into late nights and professional rivalry gives way to something undeniable, they're forced to decide if the story they're writing together is worth the risk.</p>
+        </div>
       </div>
 
-      <div class="book-card">
-        <div class="status">Writing</div>
-        <p>
-          A mystery about a journalist investigating an abusive mother who's been accused of
-          the disappearance of her young daughter.
-        </p>
+      <!-- Book 2 -->
+      <div class="book-row">
+        <div class="book-spine">
+          <span>Our Mother's Sins</span>
+        </div>
+        <div class="book-info">
+          <div class="book-genre">Thriller &amp; Mystery</div>
+          <div class="book-title">Our Mother's Sins</div>
+          <p class="book-description">When a volatile mother is arrested for the murder of her husband, her two children do the only thing they know how — run. Told across two timelines and through the eyes of an eldest daughter carrying secrets she was never meant to keep, and the zany neighbors who watched it all unfold, this thriller unravels the truth about what really happened inside those walls.</p>
+        </div>
       </div>
 
-      <div class="book-card">
-        <div class="status">Writing</div>
-        <p>
-          A magical realism short story about a young boy's unwavering kindness revealed
-          through the eyes of the people whose lives he quietly changes.
-        </p>
+      <!-- Book 3 -->
+      <div class="book-row">
+        <div class="book-spine">
+          <span>Title TBC</span>
+        </div>
+        <div class="book-info">
+          <div class="book-genre">Contemporary Romance</div>
+          <div class="book-title untitled">Untitled</div>
+          <p class="book-description">A troubled musician with walls no one has breached and a former ballerina who hasn't danced since a career-ending injury nine years ago are thrown together on a hit reality dance competition. As their performances captivate audiences and social media scrutiny intensifies, so does the pull between them. But he's spent his whole life afraid of becoming his father, and she's spent hers pouring everything into a dream she lost.</p>
+        </div>
       </div>
 
     </div>
