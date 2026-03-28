@@ -114,6 +114,56 @@ nav {
   transform: translateY(-7px) rotate(-45deg);
 }
 
+/* ---- MOBILE ---- */
+@media (max-width: 700px) {
+  nav {
+    height: auto;
+    min-height: 56px;
+    padding: 0 1.5rem;
+    align-items: center;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    gap: 0;
+    padding: 0.5rem 0 1rem;
+    background: var(--color-nav);
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links li a {
+    display: block;
+    padding: 0.85rem 0;
+    font-size: 0.85rem;
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+    color: rgba(255,255,255,0.8);
+  }
+
+  .nav-links li a:hover,
+  .nav-links li a.active {
+    color: #fff;
+  }
+
+  .hero-content h1 { font-size: 2.5rem; }
+  .hero-content p { font-size: 0.95rem; }
+  .hero-buttons { flex-direction: column; align-items: center; }
+  .print-layout,
+  .contact-layout { grid-template-columns: 1fr; }
+  .image-strip { height: 140px; }
+  .books-grid { grid-template-columns: 1fr; }
+  .book-card { border-right: none; border-bottom: 1px solid #e0d8d8; }
+  .page-heading h1 { font-size: 2.2rem; }
+}
+
 /* ---- BUTTONS ---- */
 .btn {
   display: inline-block;
@@ -262,7 +312,6 @@ nav {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: block;
 }
 
 /* ---- ME IN PRINT ---- */
@@ -377,61 +426,4 @@ footer {
   padding: 1.5rem;
   font-size: 0.8rem;
   letter-spacing: 0.04em;
-}
-
-/* ---- RESPONSIVE ---- */
-@media (max-width: 700px) {
-  .hero-content h1 { font-size: 2.5rem; }
-  .hero-content p { font-size: 0.95rem; }
-  .hero-buttons { flex-direction: column; align-items: center; }
-  .print-layout,
-  .contact-layout { grid-template-columns: 1fr; }
-  .books-grid { grid-template-columns: 1fr; }
-  .book-card { border-right: none; border-bottom: 1px solid #e0d8d8; }
-  .page-heading h1 { font-size: 2.2rem; }
-
-  .image-strip {
-    grid-template-columns: 1fr;
-    height: 200px;
-  }
-
-  .image-strip img:nth-child(1),
-  .image-strip img:nth-child(2) {
-    display: none;
-  }
-
-  .image-strip img:nth-child(3) {
-    display: block;
-    object-fit: cover;
-  }
-
-  .hamburger {
-    display: flex;
-  }
-
-  .nav-links {
-    display: none;
-    width: 100%;
-    flex-direction: column;
-    gap: 0;
-    padding: 0.5rem 0 1rem;
-    background: var(--color-nav);
-  }
-
-  .nav-links.open {
-    display: flex;
-  }
-
-  .nav-links li a {
-    display: block;
-    padding: 0.85rem 0;
-    font-size: 0.85rem;
-    border-bottom: 1px solid rgba(255,255,255,0.07);
-    color: rgba(255,255,255,0.8);
-  }
-
-  .nav-links li a:hover,
-  .nav-links li a.active {
-    color: #fff;
-  }
 }
