@@ -5,6 +5,188 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Me in Print — Alexandra Blanck</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    .portfolio-intro {
+      max-width: 700px;
+      margin: 2rem auto 3.5rem;
+      text-align: center;
+      padding: 0 2rem;
+    }
+
+    .portfolio-intro p {
+      font-size: 1rem;
+      color: var(--color-text-light);
+      line-height: 1.8;
+    }
+
+    .portfolio-section {
+      max-width: 900px;
+      margin: 0 auto 4rem;
+      padding: 0 2rem;
+    }
+
+    .portfolio-section-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 2px solid #e8e0e0;
+    }
+
+    .portfolio-section-header h2 {
+      font-family: var(--font-display);
+      font-size: 1.6rem;
+      color: var(--color-accent);
+      font-style: italic;
+    }
+
+    .portfolio-section-header .section-tag {
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #fff;
+      background: var(--color-accent);
+      padding: 0.2rem 0.65rem;
+      border-radius: 20px;
+    }
+
+    .article-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.25rem;
+      margin-bottom: 1.75rem;
+    }
+
+    .article-card {
+      border: 1px solid #e8e0e0;
+      padding: 1.4rem 1.5rem;
+      text-decoration: none;
+      color: var(--color-text);
+      display: block;
+      transition: box-shadow 0.2s, transform 0.2s, border-color 0.2s;
+      background: #fff;
+    }
+
+    .article-card:hover {
+      box-shadow: 0 6px 24px rgba(0,0,0,0.09);
+      transform: translateY(-2px);
+      border-color: var(--color-accent-light);
+    }
+
+    .article-card .card-label {
+      font-size: 0.7rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--color-accent);
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .article-card h3 {
+      font-family: var(--font-display);
+      font-size: 1rem;
+      line-height: 1.4;
+      color: var(--color-text);
+    }
+
+    .article-card .card-arrow {
+      margin-top: 0.75rem;
+      font-size: 0.8rem;
+      color: var(--color-accent);
+      font-weight: 700;
+    }
+
+    .see-more-wrap {
+      text-align: left;
+      margin-top: 0.5rem;
+    }
+
+    .btn-outline {
+      display: inline-block;
+      padding: 0.6rem 1.5rem;
+      border: 2px solid var(--color-accent);
+      color: var(--color-accent);
+      font-family: var(--font-body);
+      font-size: 0.78rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      font-weight: 700;
+      text-decoration: none;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .btn-outline:hover {
+      background: var(--color-accent);
+      color: #fff;
+    }
+
+    .article-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .article-list li {
+      border-left: 3px solid var(--color-accent-light);
+      padding: 0.6rem 1rem;
+      background: #fff;
+    }
+
+    .article-list li a {
+      font-family: var(--font-display);
+      font-size: 0.98rem;
+      color: var(--color-text);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .article-list li a:hover {
+      color: var(--color-accent);
+    }
+
+    .article-list li .pub-name {
+      display: block;
+      font-size: 0.75rem;
+      color: var(--color-text-light);
+      letter-spacing: 0.05em;
+      margin-top: 0.2rem;
+    }
+
+    .highlight-box {
+      background: var(--color-bg-light);
+      border: 1px solid #e8e0e0;
+      padding: 1.75rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .highlight-box p {
+      font-size: 0.92rem;
+      color: var(--color-text-light);
+      max-width: 520px;
+      line-height: 1.7;
+    }
+
+    .highlight-box h3 {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .poetry-note {
+      font-size: 0.85rem;
+      color: var(--color-text-light);
+      font-style: italic;
+      margin-top: 1rem;
+      padding-left: 1rem;
+      border-left: 3px solid #e8e0e0;
+    }
+  </style>
 </head>
 <body>
 
@@ -33,48 +215,148 @@
     <div class="divider"></div>
   </div>
 
-  <!-- CONTENT -->
-  <div class="print-layout">
-    <div>
-      <img
-        src="andrijana-bozic-x3qtKmUj6JY-unsplash.jpg"
-        alt="Stack of books by a window"
-        style="border-radius: 2px;"
-      />
+  <!-- INTRO -->
+  <div class="portfolio-intro">
+    <p>A selection of my professional and creative work — from B2B content strategy and thought leadership at Esko, to freelance lifestyle writing, poetry, and my personal Substack. Take a look around!</p>
+  </div>
+
+  <!-- ESKO -->
+  <div class="portfolio-section">
+    <div class="portfolio-section-header">
+      <h2>Esko</h2>
+      <span class="section-tag">Content Manager</span>
     </div>
-    <div class="print-content">
-      <h2>Welcome</h2>
-      <p>
-        Please take a look around to explore the various pieces I've written. You'll see examples
-        of my professional work with Esko, publications, Substack articles, and poetry.
-        I hope you enjoy!
-      </p>
 
-      <h3>Professional</h3>
-      <p>
-        Esko is a global provider of integrated software and hardware solutions that accelerate the
-        go-to-market process of packaged goods. From design to shelf, Esko solutions automate,
-        connect, and accelerate the entire packaging go-to-market process.
-        Discover content I've written for Esko <a href="#">here</a>.
-      </p>
+    <div class="article-grid">
 
-      <h3>Publications</h3>
-      <p>
-        My personal essays and lifestyle writing have appeared in several online publications.
-        Browse a selection of my published articles <a href="#">here</a>.
-      </p>
+      <a href="https://www.esko.com/en/resources/2026-packaging-trends" target="_blank" class="article-card">
+        <div class="card-label">Report &amp; Ebook</div>
+        <h3>2026 Packaging Trends Report</h3>
+        <div class="card-arrow">Read &rarr;</div>
+      </a>
 
-      <h3>Substack</h3>
-      <p>
-        I write a regular newsletter on Substack covering creativity, the writing life, and
-        everything in between. Subscribe and read past issues <a href="#">here</a>.
-      </p>
+      <a href="https://www.esko.com/en/resources/decoding-compliance-your-guide-to-2d-traceability-in-packaging-2023-2030" target="_blank" class="article-card">
+        <div class="card-label">Guide</div>
+        <h3>Decoding Compliance: Your Guide to 2D Traceability in Packaging (2023–2030)</h3>
+        <div class="card-arrow">Read &rarr;</div>
+      </a>
 
-      <h3>Poetry</h3>
-      <p>
-        Poetry has always been close to my heart. Read a collection of my poems <a href="#">here</a>.
-      </p>
+      <a href="https://www.esko.com/en/blog/why-sustainability-intelligence-is-becoming-essential-for-packaging-teams" target="_blank" class="article-card">
+        <div class="card-label">Blog</div>
+        <h3>Why Sustainability Intelligence is Becoming Essential for Packaging Teams</h3>
+        <div class="card-arrow">Read &rarr;</div>
+      </a>
+
+      <a href="https://www.esko.com/en/blog/beauty-under-scrutiny-from-trends-to-traceability" target="_blank" class="article-card">
+        <div class="card-label">Blog</div>
+        <h3>Beauty Under Scrutiny: From Trends to Traceability</h3>
+        <div class="card-arrow">Read &rarr;</div>
+      </a>
+
+      <a href="https://www.esko.com/en/blog/sustainable-packaging-is-no-longer-optional-its-operational" target="_blank" class="article-card">
+        <div class="card-label">Blog</div>
+        <h3>Sustainable Packaging is No Longer Optional — it's Operational</h3>
+        <div class="card-arrow">Read &rarr;</div>
+      </a>
+
+      <a href="https://www.esko.com/en/blog/smart-packaging-is-moving-to-2d-barcodes-what-the-shift-means-for-packaging" target="_blank" class="article-card">
+        <div class="card-label">Blog</div>
+        <h3>Smart Packaging is Moving to 2D Barcodes — What the Shift Means for Packaging</h3>
+        <div class="card-arrow">Read &rarr;</div>
+      </a>
+
     </div>
+
+    <div class="see-more-wrap">
+      <a href="https://www.esko.com/en/blog?es_posts_blogs%5Bquery%5D=alexandra%20blanck" target="_blank" class="btn-outline">See All My Esko Work &rarr;</a>
+    </div>
+  </div>
+
+  <!-- SUBSTACK -->
+  <div class="portfolio-section">
+    <div class="portfolio-section-header">
+      <h2>Substack</h2>
+      <span class="section-tag">Newsletter</span>
+    </div>
+
+    <div class="highlight-box">
+      <div>
+        <h3>Alexandra Blanck on Substack</h3>
+        <p>My personal newsletter covering creativity, the writing life, books, and everything in between. Subscribe to follow along on my journey as a writer.</p>
+      </div>
+      <a href="https://substack.com/@alexandrablanck" target="_blank" class="btn">Read on Substack &rarr;</a>
+    </div>
+  </div>
+
+  <!-- POETRY -->
+  <div class="portfolio-section">
+    <div class="portfolio-section-header">
+      <h2>Poetry</h2>
+      <span class="section-tag">Creative Writing</span>
+    </div>
+
+    <ul class="article-list">
+      <li>
+        <a href="https://www.amazon.com/Minnesotas-Best-Emerging-Poets-2019/dp/1713312603" target="_blank">The River — Minnesota's Best Emerging Poets 2019: An Anthology</a>
+        <span class="pub-name">Z Publishing House &mdash; View on Amazon</span>
+      </li>
+      <li>
+        <span style="font-family: 'Playfair Display', Georgia, serif; font-size: 0.98rem;">The River</span>
+        <span class="pub-name">The Tower Art &amp; Literary Magazine, University of Minnesota &mdash; 2019</span>
+      </li>
+    </ul>
+    <p class="poetry-note">The Tower's online archive is currently unavailable, but the poem is preserved in the Minnesota's Best Emerging Poets 2019 anthology linked above.</p>
+  </div>
+
+  <!-- FREELANCE -->
+  <div class="portfolio-section">
+    <div class="portfolio-section-header">
+      <h2>Freelance</h2>
+      <span class="section-tag">2019 – 2020</span>
+    </div>
+
+    <ul class="article-list">
+      <li>
+        <a href="https://incrediblelove.com/meet-singles-online-offline-dating/" target="_blank">How to Meet Quality Singles: On and Offline Dating</a>
+        <span class="pub-name">Incredible Love</span>
+      </li>
+      <li>
+        <a href="https://incrediblelove.com/single-mom-dating-tips-how-to-tell-your-kids-moms-dating/" target="_blank">Single Mom Dating Tips: How To (Successfully) Tell Your Kids Mom's Dating Again</a>
+        <span class="pub-name">Incredible Love</span>
+      </li>
+      <li>
+        <a href="https://incrediblelove.com/you-have-been-ghosted-now-what/" target="_blank">You've Been Ghosted… Now What?</a>
+        <span class="pub-name">Incredible Love</span>
+      </li>
+      <li>
+        <a href="https://incrediblelove.com/single-dad-dating-4-steps-success/" target="_blank">Single Dad Dating: 4 Steps to Dating Success</a>
+        <span class="pub-name">Incredible Love</span>
+      </li>
+      <li>
+        <a href="https://incrediblelove.com/dating-detox-how-to-revitalize-your-dating-life/" target="_blank">Dating Detox: How To Revitalize Your Dating Life</a>
+        <span class="pub-name">Incredible Love</span>
+      </li>
+      <li>
+        <a href="https://www.vaidawellness.com/enhancing-your-babys-life-through-a-chiropractic-touch/" target="_blank">Enhancing Your Baby's Life Through a Chiropractic Touch</a>
+        <span class="pub-name">Vaida Wellness Center</span>
+      </li>
+      <li>
+        <a href="https://www.vaidawellness.com/container-baby-syndrome/" target="_blank">Container Baby Syndrome: Everything You Need to Know</a>
+        <span class="pub-name">Vaida Wellness Center</span>
+      </li>
+      <li>
+        <a href="https://www.vaidawellness.com/sweet-dreams-come-from-sound-sleep-hygiene/" target="_blank">Sweet Dreams Come From Sound Sleep Hygiene</a>
+        <span class="pub-name">Vaida Wellness Center</span>
+      </li>
+      <li>
+        <a href="https://www.vaidawellness.com/chiropractic-care-during-pregnancy/" target="_blank">Chiropractic Care During Pregnancy</a>
+        <span class="pub-name">Vaida Wellness Center</span>
+      </li>
+      <li>
+        <a href="https://www.vaidawellness.com/treating-the-symptoms-of-childhood-ear-infections/" target="_blank">Treating the Symptoms of Childhood Ear Infections</a>
+        <span class="pub-name">Vaida Wellness Center</span>
+      </li>
+    </ul>
   </div>
 
   <!-- FOOTER -->
