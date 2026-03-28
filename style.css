@@ -121,4 +121,317 @@ nav {
   background: var(--color-accent-btn);
   color: #fff;
   text-decoration: none;
-  font-family: var(--font
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s;
+}
+
+.btn:hover {
+  background: var(--color-accent);
+  transform: translateY(-1px);
+}
+
+/* ---- PAGE HEADING ---- */
+.page-heading {
+  text-align: center;
+  padding: 3.5rem 1rem 1rem;
+}
+
+.page-heading h1 {
+  font-family: var(--font-display);
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  font-style: italic;
+}
+
+.page-heading .divider {
+  width: 48px;
+  height: 1px;
+  background: var(--color-divider);
+  margin: 1.25rem auto 0;
+}
+
+/* ---- HERO ---- */
+.hero {
+  position: relative;
+  height: 520px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  background: #444 url('nick-morrison-FHnnjk1Yj7Y-unsplash.jpg') center/cover no-repeat;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.38);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  animation: fadeUp 0.9s ease both;
+}
+
+.hero-content h1 {
+  font-family: var(--font-display);
+  font-size: 4.5rem;
+  font-weight: 900;
+  color: #fff;
+  line-height: 1.05;
+  margin-bottom: 0.5rem;
+}
+
+.hero-content p {
+  color: rgba(255,255,255,0.9);
+  font-size: 1.1rem;
+  letter-spacing: 0.04em;
+  margin-bottom: 2rem;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ---- SECTION WRAPPER ---- */
+.section {
+  padding: 4rem 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.section-bg {
+  background: var(--color-bg-light);
+}
+
+/* ---- THREE-COL CARDS (About) ---- */
+.three-col {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2.5rem;
+  text-align: center;
+}
+
+.three-col img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.three-col h3 {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  margin-bottom: 0.6rem;
+}
+
+.three-col p {
+  font-size: 0.9rem;
+  color: var(--color-text-light);
+}
+
+.three-col a {
+  color: var(--color-accent);
+}
+
+/* ---- IMAGE STRIP ---- */
+.image-strip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  height: 240px;
+  overflow: hidden;
+}
+
+.image-strip img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ---- ME IN PRINT ---- */
+.print-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: 3rem;
+  align-items: start;
+  padding: 3rem 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.print-layout img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.print-content h2 {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.print-content h3 {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  margin: 1.5rem 0 0.4rem;
+}
+
+.print-content p {
+  font-size: 0.92rem;
+  color: var(--color-text-light);
+  margin-bottom: 0.5rem;
+}
+
+.print-content a {
+  color: var(--color-accent);
+}
+
+/* ---- BOOKS ---- */
+.books-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 0;
+  border-top: 1px solid #e0d8d8;
+}
+
+.book-card {
+  padding: 2.5rem 2rem;
+  border-right: 1px solid #e0d8d8;
+  text-align: center;
+}
+
+.book-card:last-child {
+  border-right: none;
+}
+
+.book-card .status {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  color: var(--color-accent-light);
+  font-style: italic;
+  margin-bottom: 0.75rem;
+}
+
+.book-card p {
+  font-size: 0.9rem;
+  color: var(--color-text-light);
+}
+
+/* ---- CONTACT ---- */
+.contact-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  padding: 4rem 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.contact-left h2 {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.contact-left p {
+  font-size: 0.92rem;
+  color: var(--color-text-light);
+  margin-bottom: 0.75rem;
+}
+
+.contact-left .signature {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  color: var(--color-text);
+  margin: 1.25rem 0 1.5rem;
+}
+
+.contact-right img {
+  width: 100%;
+  object-fit: cover;
+}
+
+/* ---- FOOTER ---- */
+footer {
+  background: var(--color-nav);
+  color: rgba(255,255,255,0.5);
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+}
+
+/* ---- RESPONSIVE ---- */
+@media (max-width: 700px) {
+  .hero-content h1 { font-size: 2.5rem; }
+  .hero-content p { font-size: 0.95rem; }
+  .hero-buttons { flex-direction: column; align-items: center; }
+  .print-layout,
+  .contact-layout { grid-template-columns: 1fr; }
+  .books-grid { grid-template-columns: 1fr; }
+  .book-card { border-right: none; border-bottom: 1px solid #e0d8d8; }
+  .page-heading h1 { font-size: 2.2rem; }
+
+  .image-strip {
+    grid-template-columns: 1fr;
+    height: 200px;
+  }
+
+  .image-strip img:nth-child(1),
+  .image-strip img:nth-child(2) {
+    display: none;
+  }
+
+  .image-strip img:nth-child(3) {
+    display: block;
+    object-fit: cover;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    gap: 0;
+    padding: 0.5rem 0 1rem;
+    background: var(--color-nav);
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links li a {
+    display: block;
+    padding: 0.85rem 0;
+    font-size: 0.85rem;
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+    color: rgba(255,255,255,0.8);
+  }
+
+  .nav-links li a:hover,
+  .nav-links li a.active {
+    color: #fff;
+  }
+}
