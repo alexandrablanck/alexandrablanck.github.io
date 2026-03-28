@@ -314,6 +314,11 @@ nav {
   object-fit: cover;
 }
 
+.image-strip img:first-child {
+  object-fit: contain;
+  background: #f5f3f1;
+}
+
 /* ---- ME IN PRINT ---- */
 .print-layout {
   display: grid;
