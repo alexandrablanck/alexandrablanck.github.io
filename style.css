@@ -79,6 +79,68 @@ nav {
   font-weight: 700;
 }
 
+/* ---- HAMBURGER ---- */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: #fff;
+  transition: all 0.3s ease;
+}
+
+.hamburger.open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ---- MOBILE NAV ---- */
+@media (max-width: 700px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 56px;
+    left: 0;
+    right: 0;
+    background: var(--color-nav);
+    flex-direction: column;
+    gap: 0;
+    padding: 0.5rem 0 1rem;
+    z-index: 99;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links li a {
+    display: block;
+    padding: 0.85rem 2.5rem;
+    font-size: 0.85rem;
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+  }
+}
+
 /* ---- BUTTONS ---- */
 .btn {
   display: inline-block;
@@ -345,11 +407,13 @@ footer {
 
 /* ---- RESPONSIVE ---- */
 @media (max-width: 700px) {
-  .hero-content h1 { font-size: 2.8rem; }
-  .nav-links { gap: 1rem; }
-  .nav-links a { font-size: 0.72rem; }
+  .hero-content h1 { font-size: 2.5rem; }
+  .hero-content p { font-size: 0.95rem; }
+  .hero-buttons { flex-direction: column; align-items: center; }
   .print-layout,
   .contact-layout { grid-template-columns: 1fr; }
   .image-strip { height: 140px; }
   .books-grid { grid-template-columns: 1fr; }
-  .book-card { border-right: none; borde
+  .book-card { border-right: none; border-bottom: 1px solid #e0d8d8; }
+  .page-heading h1 { font-size: 2.2rem; }
+}
