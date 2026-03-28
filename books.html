@@ -101,9 +101,11 @@
 </head>
 <body>
 
-  <!-- NAV -->
-  <nav>
+<nav>
     <a href="index.html" class="nav-logo">Alexandra Blanck</a>
+    <button class="hamburger" onclick="this.classList.toggle('open'); document.querySelector('.nav-links').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
