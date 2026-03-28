@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Alexandra Blanck</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="index.html" class="nav-logo">Alexandra Blanck</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="print.html">Me in Print</a></li>
+      <li><a href="books.html">Books</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- PAGE HEADING -->
+  <div class="page-heading">
+    <h1>Contact Me</h1>
+    <div class="divider"></div>
+  </div>
+
+  <!-- CONTACT LAYOUT -->
+  <div class="contact-layout">
+    <div class="contact-left">
+      <h2>Questions or Comments?</h2>
+      <p>You can send me a message or ask me a general question using this form.</p>
+      <p>I will do my best to get back to you soon!</p>
+      <div class="signature">Alexandra Blanck</div>
+
+      <!-- Simple mailto contact form -->
+      <div style="display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 1.25rem;">
+        <input
+          id="contact-name"
+          type="text"
+          placeholder="Your Name"
+          style="padding: 0.65rem 1rem; border: 1px solid #ccc; font-family: var(--font-body); font-size: 0.9rem; outline: none;"
+        />
+        <input
+          id="contact-email"
+          type="email"
+          placeholder="Your Email"
+          style="padding: 0.65rem 1rem; border: 1px solid #ccc; font-family: var(--font-body); font-size: 0.9rem; outline: none;"
+        />
+        <textarea
+          id="contact-message"
+          placeholder="Your Message"
+          rows="5"
+          style="padding: 0.65rem 1rem; border: 1px solid #ccc; font-family: var(--font-body); font-size: 0.9rem; resize: vertical; outline: none;"
+        ></textarea>
+      </div>
+
+      <button class="btn" onclick="sendEmail()">Get in Touch</button>
+    </div>
+
+    <div class="contact-right">
+      <img
+        src="https://images.unsplash.com/photo-1495520084855-79bd7ec79bf3?w=700&q=80"
+        alt="Vintage rotary telephone"
+        style="border-radius: 2px;"
+      />
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    &copy; 2025 Alexandra Blanck &mdash; All Rights Reserved
+  </footer>
+
+  <script>
+    function sendEmail() {
+      const name    = document.getElementById('contact-name').value.trim();
+      const email   = document.getElementById('contact-email').value.trim();
+      const message = document.getElementById('contact-message').value.trim();
+
+      if (!name || !email || !message) {
+        alert('Please fill in all fields before sending.');
+        return;
+      }
+
+      // Replace the address below with your real email address
+      const to      = 'your@email.com';
+      const subject = encodeURIComponent('Message from ' + name + ' via alexandrablanck.com');
+      const body    = encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\n\n' + message);
+
+      window.location.href = 'mailto:' + to + '?subject=' + subject + '&body=' + body;
+    }
+  </script>
+
+</body>
+</html>
