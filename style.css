@@ -46,6 +46,7 @@ nav {
   position: sticky;
   top: 0;
   z-index: 100;
+  flex-wrap: wrap;
 }
 
 .nav-logo {
@@ -83,19 +84,22 @@ nav {
 .hamburger {
   display: none;
   flex-direction: column;
+  justify-content: center;
   gap: 5px;
   background: none;
   border: none;
   cursor: pointer;
-  padding: 4px;
+  padding: 8px;
+  z-index: 101;
 }
 
 .hamburger span {
   display: block;
   width: 24px;
   height: 2px;
-  background: #fff;
+  background: #ffffff;
   transition: all 0.3s ease;
+  border-radius: 2px;
 }
 
 .hamburger.open span:nth-child(1) {
@@ -110,23 +114,26 @@ nav {
   transform: translateY(-7px) rotate(-45deg);
 }
 
-/* ---- MOBILE NAV ---- */
+/* ---- MOBILE ---- */
 @media (max-width: 700px) {
+  nav {
+    height: auto;
+    min-height: 56px;
+    padding: 0 1.5rem;
+    align-items: center;
+  }
+
   .hamburger {
     display: flex;
   }
 
   .nav-links {
     display: none;
-    position: absolute;
-    top: 56px;
-    left: 0;
-    right: 0;
-    background: var(--color-nav);
+    width: 100%;
     flex-direction: column;
     gap: 0;
     padding: 0.5rem 0 1rem;
-    z-index: 99;
+    background: var(--color-nav);
   }
 
   .nav-links.open {
@@ -135,10 +142,26 @@ nav {
 
   .nav-links li a {
     display: block;
-    padding: 0.85rem 2.5rem;
+    padding: 0.85rem 0;
     font-size: 0.85rem;
     border-bottom: 1px solid rgba(255,255,255,0.07);
+    color: rgba(255,255,255,0.8);
   }
+
+  .nav-links li a:hover,
+  .nav-links li a.active {
+    color: #fff;
+  }
+
+  .hero-content h1 { font-size: 2.5rem; }
+  .hero-content p { font-size: 0.95rem; }
+  .hero-buttons { flex-direction: column; align-items: center; }
+  .print-layout,
+  .contact-layout { grid-template-columns: 1fr; }
+  .image-strip { height: 140px; }
+  .books-grid { grid-template-columns: 1fr; }
+  .book-card { border-right: none; border-bottom: 1px solid #e0d8d8; }
+  .page-heading h1 { font-size: 2.2rem; }
 }
 
 /* ---- BUTTONS ---- */
@@ -403,17 +426,4 @@ footer {
   padding: 1.5rem;
   font-size: 0.8rem;
   letter-spacing: 0.04em;
-}
-
-/* ---- RESPONSIVE ---- */
-@media (max-width: 700px) {
-  .hero-content h1 { font-size: 2.5rem; }
-  .hero-content p { font-size: 0.95rem; }
-  .hero-buttons { flex-direction: column; align-items: center; }
-  .print-layout,
-  .contact-layout { grid-template-columns: 1fr; }
-  .image-strip { height: 140px; }
-  .books-grid { grid-template-columns: 1fr; }
-  .book-card { border-right: none; border-bottom: 1px solid #e0d8d8; }
-  .page-heading h1 { font-size: 2.2rem; }
 }
