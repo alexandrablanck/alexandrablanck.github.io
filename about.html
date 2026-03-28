@@ -5,6 +5,57 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About — Alexandra Blanck</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    .about-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 3rem;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 3rem 2rem 5rem;
+    }
+
+    .about-col {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .about-col img {
+      width: 100%;
+      max-width: 340px;
+      height: 320px;
+      object-fit: cover;
+      object-position: top;
+      margin-bottom: 1.5rem;
+    }
+
+    .about-col h3 {
+      font-family: var(--font-display);
+      font-size: 1.3rem;
+      margin-bottom: 0.75rem;
+      color: var(--color-text);
+    }
+
+    .about-col p {
+      font-size: 0.92rem;
+      color: var(--color-text-light);
+      line-height: 1.8;
+      max-width: 340px;
+    }
+
+    .about-col a {
+      color: var(--color-accent);
+    }
+
+    .about-divider {
+      width: 48px;
+      height: 2px;
+      background: var(--color-accent-light);
+      margin: 0 auto 1rem;
+    }
+  </style>
 </head>
 <body>
 
@@ -26,49 +77,30 @@
     <div class="divider"></div>
   </div>
 
-  <!-- THREE COLUMNS -->
-  <div class="section">
-    <div class="three-col">
+  <!-- ABOUT GRID -->
+  <div class="about-grid">
 
-      <div>
-        <img
-          src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80"
-          alt="Alexandra at a lighthouse"
-        />
-        <h3>About Me</h3>
-        <p>
-          Hi, I'm Alexandra and I'm a writer. Welcome to my portfolio, where I have my personal
-          and professional work. Whether you're looking for creative lifestyle tidbits, fiction,
-          or poetry, it's all here and waiting for you!
-        </p>
-      </div>
-
-      <div>
-        <img
-          src="https://images.unsplash.com/photo-1455390582262-044cdead277a?w=600&q=80"
-          alt="Writing at a desk with coffee"
-        />
-        <h3>My Work</h3>
-        <p>
-          I'm a Content Manager by day, aspiring author by night. Click
-          <a href="print.html">here</a> to see some of my published work.
-          Don't hesitate to <a href="contact.html">reach out</a> if you have any questions!
-        </p>
-      </div>
-
-      <div>
-        <img
-          src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80"
-          alt="Alexandra in Central Park"
-        />
-        <h3>Join My Journey</h3>
-        <p>
-          My goal is to inspire those who read and engage with my content. Find me on social
-          media to follow along on my journey. I hope to see you there!
-        </p>
-      </div>
-
+    <div class="about-col">
+      <img src="photo-headshot-alex-blanckv3.png" alt="Alexandra Blanck" />
+      <div class="about-divider"></div>
+      <h3>Hi, I'm Alexandra</h3>
+      <p>I'm a writer based in the US with a passion for storytelling in all its forms. By day I work as a Content Manager at Esko, crafting B2B content that makes complex ideas accessible. By night I'm deep in the pages of whatever novel I'm currently writing — or reading. Welcome to my little corner of the internet.</p>
     </div>
+
+    <div class="about-col">
+      <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?w=600&q=80" alt="Writing at a desk" />
+      <div class="about-divider"></div>
+      <h3>My Work</h3>
+      <p>From thought leadership and industry reports to poetry and fiction, I write across a range of genres and formats. Browse my professional portfolio, published articles, and creative writing on the <a href="print.html">Me in Print</a> page — and take a peek at the novels I'm currently working on under <a href="books.html">Books</a>.</p>
+    </div>
+
+    <div class="about-col">
+      <img src="alexa-williams-RaYjMmmaSCA-unsplash.jpg" alt="Alexandra on her journey" />
+      <div class="about-divider"></div>
+      <h3>Join My Journey</h3>
+      <p>Writing can be a solitary pursuit, but it doesn't have to be. I share the highs and lows of the writing life — querying, drafting, reading, and everything in between — on my <a href="https://substack.com/@alexandrablanck" target="_blank">Substack</a> and across social media. I'd love to have you along for the ride.</p>
+    </div>
+
   </div>
 
   <!-- FOOTER -->
