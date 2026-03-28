@@ -22,16 +22,21 @@
       text-align: center;
     }
 
-  .about-col img {
-  width: 100%;
-  max-width: 340px;
-  height: 320px;
-  object-fit: cover;
-  object-position: top;
-  margin-bottom: 1.5rem;
-}
+    .about-col img {
+      width: 100%;
+      max-width: 340px;
+      height: 320px;
+      object-fit: cover;
+      object-position: top;
+      margin-bottom: 1.5rem;
+    }
 
-<img src="photo-headshot-alex-blanckv3.png" alt="Alexandra Blanck" class="headshot" />
+    .about-col img.headshot {
+      object-fit: contain;
+      background-color: #f5f3f1;
+      border: 1px solid #e0d8d8;
+      padding: 1rem;
+    }
 
     .about-col h3 {
       font-family: var(--font-display);
@@ -83,7 +88,7 @@
   <div class="about-grid">
 
     <div class="about-col">
-      <img src="photo-headshot-alex-blanckv3.png" alt="Alexandra Blanck" />
+      <img src="photo-headshot-alex-blanckv3.png" alt="Alexandra Blanck" class="headshot" />
       <div class="about-divider"></div>
       <h3>Hi, I'm Alexandra</h3>
       <p>I'm a writer based in the US with a passion for storytelling in all its forms. By day I work as a Content Manager at Esko, crafting B2B content that makes complex ideas accessible. By night I'm deep in the pages of whatever novel I'm currently writing — or reading. Welcome to my little corner of the internet.</p>
