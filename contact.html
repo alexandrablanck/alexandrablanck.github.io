@@ -46,7 +46,7 @@
       <button class="btn" onclick="sendEmail()">Get in Touch</button>
     </div>
 
-    <div class="contact-right">
+    <div class="contact-right" id="contact-img">
       <img src="shutterstock_787954993.jpg" alt="Contact" style="width: 100%; border-radius: 2px;" />
     </div>
   </div>
@@ -69,6 +69,17 @@
       const body    = encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\n\n' + message);
       window.location.href = 'mailto:' + to + '?subject=' + subject + '&body=' + body;
     }
+
+    function handleResize() {
+      const el = document.getElementById('contact-img');
+      if (window.innerWidth <= 700) {
+        el.style.display = 'none';
+      } else {
+        el.style.display = 'block';
+      }
+    }
+    handleResize();
+    window.addEventListener('resize', handleResize);
   </script>
 
 </body>
