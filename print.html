@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -163,6 +164,18 @@
       padding-left: 1rem;
       border-left: 3px solid #e8e0e0;
     }
+
+    @media (max-width: 700px) {
+      .image-strip img:nth-child(1),
+      .image-strip img:nth-child(2) {
+        display: none !important;
+      }
+
+      .image-strip {
+        grid-template-columns: 1fr !important;
+        height: 200px !important;
+      }
+    }
   </style>
 </head>
 <body>
@@ -181,7 +194,7 @@
     </ul>
   </nav>
 
-<div class="image-strip">
+  <div class="image-strip">
     <img src="andrijana-bozic-x3qtKmUj6JY-unsplash.jpg" alt="Workspace" />
     <img src="rs=w_800,cg_true.webp" alt="Office" />
     <img src="ella-jardim-M0zs81FNm6s-unsplash.jpg" alt="Writing" />
@@ -325,3 +338,4 @@
 
 </body>
 </html>
+```
