@@ -7,6 +7,24 @@
   <meta name="description" content="Alexandra Blanck is a professional writer, content manager, and author based in the Washington DC." />
   <link rel="stylesheet" href="style.css" />
   <style>
+    #contact-inputs {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      margin-bottom: 1.25rem;
+      width: 100%;
+    }
+
+    #contact-inputs input,
+    #contact-inputs textarea {
+      width: 100%;
+      padding: 0.65rem 1rem;
+      border: 1px solid #ccc;
+      font-family: var(--font-body);
+      font-size: 0.9rem;
+      outline: none;
+    }
+
     @media (max-width: 700px) {
       .contact-layout {
         display: flex;
@@ -29,20 +47,8 @@
         text-align: center;
       }
 
-      .contact-left input,
-      .contact-left textarea,
-      .contact-left button {
-        width: 100%;
-        max-width: 400px;
-      }
-
       #contact-inputs {
-        width: 100%;
         max-width: 400px;
-        display: flex;
-        flex-direction: column;
-        gap: 0.75rem;
-        margin-bottom: 1.25rem;
       }
     }
   </style>
@@ -76,12 +82,9 @@
       <div class="signature">Alexandra Blanck</div>
 
       <div id="contact-inputs">
-        <input id="contact-name" type="text" placeholder="Your Name"
-          style="padding: 0.65rem 1rem; border: 1px solid #ccc; font-family: var(--font-body); font-size: 0.9rem; outline: none;" />
-        <input id="contact-email" type="email" placeholder="Your Email"
-          style="padding: 0.65rem 1rem; border: 1px solid #ccc; font-family: var(--font-body); font-size: 0.9rem; outline: none;" />
-        <textarea id="contact-message" placeholder="Your Message" rows="5"
-          style="padding: 0.65rem 1rem; border: 1px solid #ccc; font-family: var(--font-body); font-size: 0.9rem; resize: vertical; outline: none;"></textarea>
+        <input id="contact-name" type="text" placeholder="Your Name" />
+        <input id="contact-email" type="email" placeholder="Your Email" />
+        <textarea id="contact-message" placeholder="Your Message" rows="5" style="resize: vertical;"></textarea>
       </div>
 
       <button class="btn" onclick="sendEmail()">Get in Touch</button>
