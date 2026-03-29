@@ -162,6 +162,8 @@ nav {
   .books-grid { grid-template-columns: 1fr; }
   .book-card { border-right: none; border-bottom: 1px solid #e0d8d8; }
   .page-heading h1 { font-size: 2.2rem; }
+     .contact-layout { padding: 2rem 1.5rem; }
+  .contact-right { display: none; }
 }
 
 /* ---- BUTTONS ---- */
