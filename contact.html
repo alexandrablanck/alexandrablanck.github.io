@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact — Alexandra Blanck</title>
+  <meta name="description" content="Alexandra Blanck is a professional writer, content manager, and author based in the Washington DC." />
   <link rel="stylesheet" href="style.css" />
   <style>
     @media (max-width: 700px) {
@@ -16,11 +17,32 @@
 
       .contact-left {
         width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         text-align: center;
       }
 
-      .contact-left div {
-        text-align: left;
+      .contact-left h2,
+      .contact-left p,
+      .contact-left .signature {
+        text-align: center;
+      }
+
+      .contact-left input,
+      .contact-left textarea,
+      .contact-left button {
+        width: 100%;
+        max-width: 400px;
+      }
+
+      #contact-inputs {
+        width: 100%;
+        max-width: 400px;
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+        margin-bottom: 1.25rem;
       }
     }
   </style>
@@ -28,12 +50,12 @@
 <body>
 
   <nav>
-    <a href="index.html" class="nav-logo">Alexandra Blanck</a>
+    <a href="/" class="nav-logo">Alexandra Blanck</a>
     <button class="hamburger" onclick="this.classList.toggle('open'); document.querySelector('.nav-links').classList.toggle('open')">
       <span></span><span></span><span></span>
     </button>
     <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
+      <li><a href="/">Home</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="print.html">Me in Print</a></li>
       <li><a href="books.html">Books</a></li>
@@ -53,7 +75,7 @@
       <p>I will do my best to get back to you soon!</p>
       <div class="signature">Alexandra Blanck</div>
 
-      <div style="display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 1.25rem;">
+      <div id="contact-inputs">
         <input id="contact-name" type="text" placeholder="Your Name"
           style="padding: 0.65rem 1rem; border: 1px solid #ccc; font-family: var(--font-body); font-size: 0.9rem; outline: none;" />
         <input id="contact-email" type="email" placeholder="Your Email"
@@ -83,7 +105,7 @@
         alert('Please fill in all fields before sending.');
         return;
       }
-      const to      = 'ablanck266@gmail.com';
+      const to      = 'your@email.com';
       const subject = encodeURIComponent('Message from ' + name + ' via alexandrablanck.com');
       const body    = encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\n\n' + message);
       window.location.href = 'mailto:' + to + '?subject=' + subject + '&body=' + body;
